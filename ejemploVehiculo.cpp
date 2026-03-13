@@ -16,25 +16,28 @@ class Vehiculo{ //CLASE PADRE VEHICULO
 class Auto : public Vehiculo{
 	public:  
 	//ATRIBUTOS
-		int numeroPuertas; 
+		int kilometraje; 
 	//METODO APLICADO POLIMORFISMO
 		void mostrarInfo() override {   
-			cout<<"--AUTO--"<<endl;
+			cout<<"INFORMACION AUTO"<<endl;
 			Vehiculo::mostrarInfo();
-			cout<< "Numero de puertas: " <<numeroPuertas<< endl; 
+			cout<< "Kilometraje: " <<kilometraje<< endl;  
+			
 		}	
-}; 
+};  
+
 
 //CLASE MOTO HEREDA DE VEHICULO
 class Moto : public Vehiculo{
 	public: 
 	//ATRIBUTOS
-		int cilindraje; 
+		string frenos; 
 	//METODO APLICADO POLIMORFISMO
 		void mostrarInfo() override { 
-			cout<<"--MOTO--"<<endl;
+			cout<<"INFORMACION MOTO"<<endl;
 			Vehiculo::mostrarInfo();
-			cout<< "Cilindraje: " <<cilindraje <<" cc"<< endl; 
+			cout<< "Tipo de frenos: " <<frenos << endl; 
+			
 		}	
 };  
 
@@ -46,14 +49,14 @@ int main(){
 	//ASIGNACION DE VALORES	
 	a.marca="Chevolet"; 
 	a.modelo="SUV";
-	a.numeroPuertas = 5;
+	a.kilometraje = 12000;
 	//IMPRIMIR INFORMACION
 	a.mostrarInfo(); 
 	
 	//ASIGNACION DE VALORES
 	m.marca = "Honda"; 
 	m.modelo = "Deportivo";
-	m.cilindraje = 150; 
+	m.frenos = "Disco"; 
 	
 	//IMPRIMIR INFORMACION
 	m.mostrarInfo();   
